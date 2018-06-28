@@ -64,10 +64,11 @@ class SpatialDistribution():
         p = stats.norm.sf(abs(z)) * 2
         
         # plot summary histogram with hypothesis test statistics
-        plt.hist(self.sim_dists, bins=30, color='b', edgecolor='k')
+        plt.hist(self.sim_dists, bins=30, color='#c5d8ed', edgecolor='#3a64b6')
         plt.axvline(self.orig_dist, color='red', linewidth=2)
         plt.title('Z-score: {:.4f} - p-value: {:.4f}'.format(z, p), loc='right')
-        plt.xlabel('Distance')
+        plt.title('Summary', loc='left')
+        plt.xlabel('Average nearest neighbor distance')
         plt.ylabel('Frequency')
         plt.show()
         
